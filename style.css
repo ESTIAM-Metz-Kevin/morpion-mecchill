@@ -1,0 +1,72 @@
+body {
+    background-color: #212223;
+    color: white;
+}
+
+#board {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    width: 312px;
+    height: 312px;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.cell:nth-of-type(3n-2),
+.cell:nth-of-type(3n-1) {
+    border-right: white solid 6px;
+}
+
+.cell:not(:nth-last-child(-n+3)) {
+    border-bottom: white solid 6px;
+}
+
+div > .circle,
+div > .cross {
+    width: 60px;
+    height: 60px;
+}
+
+.j1 {
+    color: rgb(54, 148, 255);
+}
+
+.j2 {
+    color: rgb(112, 5, 5);
+}
+
+.circle {
+    border-radius: 100%;
+    border: rgb(54, 148, 255) solid 6px;
+}
+
+.cross {
+    position: relative;
+}
+
+.cross::after,
+.cross::before {
+    content: "";
+    display: block;
+    height: 15px;
+    width: 60px;
+    background-color: rgb(112, 5, 5);
+    position: absolute;
+    top: calc(50% - 15px / 2);
+}
+
+.cross::after {
+    rotate: 45deg;
+}
+
+.cross::before {
+    rotate: -45deg;
+}
