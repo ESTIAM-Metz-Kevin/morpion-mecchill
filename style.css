@@ -1,0 +1,33 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+  }
+  .board {
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 5px;
+    margin: 20px auto;
+  }
+  .cell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid black;
+    font-size: 2rem;
+    cursor: pointer;
+  }
+  .cross {
+    color: red;
+  }
+  .circle {
+    color: blue;
+  }
+  .hidden {
+    display: none;
+  }
+  .info {
+    font-size: 1.2rem;
+    margin: 10px 0;
+  }
